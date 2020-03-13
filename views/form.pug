@@ -10,13 +10,15 @@ block content
         li= error.msg
 
 
-  form(action="save" method="POST")
+  form(action="/" method="POST" class="form-registration")
    div.form-group
     label(for="registrationName") Registartion Name:
     input(
       type="text"
       id="registrationName"
       name="registrationName"
+      class="form-control"
+      required="true"	
     )
    div.form-group
     br
@@ -26,6 +28,7 @@ block content
       type="text"
       id="contactName"
       name="contactName"
+      class="form-control"
       required="true"
     )
    div.form-group
@@ -35,6 +38,7 @@ block content
     input(
       type="number"
       id="pin"
+      class="form-control"
       name="pin"
     )
    div.form-group
@@ -53,6 +57,7 @@ block content
     input(
       type="text"
       id="website"
+      class="form-control"
       name="website"
     )
    div.form-group
@@ -62,6 +67,7 @@ block content
     input(
       type="tel"
       id="phoneNumber"
+      class="form-control"
       name="phoneNumber"
     )
    div.form-group
@@ -71,10 +77,11 @@ block content
     input(
       type="number"
       id="transactions"
+      class="form-control"
       name="transactions"
     )
    div.form-group
     br
     | 
-    input(type="submit" value="Submit")
+    input(type="submit" value="Submit" class="btn btn-lg btn-primary btn-block")
 

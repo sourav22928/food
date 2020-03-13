@@ -14,13 +14,28 @@ router.get('/', (req, res) => {
   });
 });
 
-router.post('/save',
+router.post('/',
   [
     check('registrationName')
     .isLength({
       min: 1
     })
     .withMessage('Please enter a registration name'),
+    check('contactName')
+    .isLength({
+      min: 1
+    })
+    .withMessage('Please enter a contact name'),
+    check('pin')
+    .isLength({
+      min: 6
+    })
+    .withMessage('Please enter a valid pincode'),
+    check('phoneNumber')
+    .isLength({
+      min: 10
+    })
+    .withMessage('Please enter a valid phoneNumber'),
   ],
   (req, res) => {
     const errors = validationResult(req);
@@ -57,6 +72,7 @@ router.post('/save',
             }
       });
     } else {
+      res.status(400);
       res.render('form', {
         title: 'Registration form',
         errors: errors.array(),
