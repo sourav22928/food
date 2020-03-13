@@ -10,3 +10,6 @@ A food delivery company to self onboard the restaurants. It collects basic merch
 Commands to run:
 * npm install
 * npm run watch
+
+## Video Link
+https://drive.google.com/file/d/1wq2HiB2_J01EgdBDl2W8b_bhAJlFWNN6/view
