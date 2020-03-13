@@ -1,0 +1,80 @@
+extends layout
+
+block content
+
+  -data = data || {}
+
+  if errors
+    ul
+      for error in errors
+        li= error.msg
+
+
+  form(action="save" method="POST")
+   div.form-group
+    label(for="registrationName") Registartion Name:
+    input(
+      type="text"
+      id="registrationName"
+      name="registrationName"
+    )
+   div.form-group
+    br
+    | 
+    label(for="contactName") Contact Name:
+    input(
+      type="text"
+      id="contactName"
+      name="contactName"
+      required="true"
+    )
+   div.form-group
+    br
+    | 
+    label(for="pin") Pincode:
+    input(
+      type="number"
+      id="pin"
+      name="pin"
+    )
+   div.form-group
+    br
+    | 
+    label(for="location") Location:
+    input(
+      type="string"
+      id="location"
+      name="location"
+    )
+   div.form-group
+    br
+    | 
+    label(for="website") Website:
+    input(
+      type="text"
+      id="website"
+      name="website"
+    )
+   div.form-group
+    br
+    | 
+    label(for="phoneNumber") Phone Number:
+    input(
+      type="tel"
+      id="phoneNumber"
+      name="phoneNumber"
+    )
+   div.form-group
+    br
+    | 
+    label(for="transactions") Average Daily Transactions:
+    input(
+      type="number"
+      id="transactions"
+      name="transactions"
+    )
+   div.form-group
+    br
+    | 
+    input(type="submit" value="Submit")
+
